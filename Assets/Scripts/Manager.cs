@@ -23,7 +23,7 @@ public class Manager : MonoBehaviour {
     public Text MultiverseUpgradesOwnedText;
     public Text MultiverseUpgradesCostText;
     
-    float TotalClicks;
+    public float TotalClicks;
     float clicksPerSecond;
     float clickerUpgradesOwned;
     public float clickerUpgradeCost;
@@ -48,6 +48,7 @@ public class Manager : MonoBehaviour {
 
     public void Start() {
         InvokeRepeating("ActionPerSecond", 1.0f, 1f);
+        Timer.instance.BeginTimer();
     }
 
     public void Update() {
@@ -56,7 +57,7 @@ public class Manager : MonoBehaviour {
     }
 
     public void AddClicks() {
-        TotalClicks += 1+clickerUpgradesOwned;
+        TotalClicks += 10000+clickerUpgradesOwned;
         ClicksTotalText.text = TotalClicks.ToString("0");
     }
 
