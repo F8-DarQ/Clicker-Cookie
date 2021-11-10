@@ -57,7 +57,7 @@ public class Manager : MonoBehaviour {
     }
 
     public void AddClicks() {
-        TotalClicks += 10000+clickerUpgradesOwned;
+        TotalClicks += 1+clickerUpgradesOwned;
         ClicksTotalText.text = TotalClicks.ToString("0");
     }
 
